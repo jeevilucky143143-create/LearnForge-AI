@@ -1,0 +1,1 @@
+/Library/PostgreSQL/18/bin/postgres "-D" "backend/storage/pgdata" "-p" "5433"
