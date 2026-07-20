@@ -1,8 +1,13 @@
 import axios from "axios";
 import { getCookie } from "./cookies";
 
+const envApiUrl = process.env.NEXT_PUBLIC_API_URL;
+const baseURL = envApiUrl
+  ? (envApiUrl.endsWith("/api/v1") ? envApiUrl : `${envApiUrl.replace(/\/$/, "")}/api/v1`)
+  : "http://localhost:8000/api/v1";
+
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1",
+  baseURL,
   headers: {
     "Content-Type": "application/json",
   },
