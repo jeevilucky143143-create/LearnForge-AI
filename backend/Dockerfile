@@ -28,7 +28,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
     supabase==2.31.0 \
     httpx==0.28.1 \
     scikit-learn==1.5.2 \
-    numpy==1.26.4
+    numpy==1.26.4 \
+    pypdfium2==4.30.0
 
 FROM python:3.9-slim AS runner
 
